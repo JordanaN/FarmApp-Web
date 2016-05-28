@@ -1,0 +1,67 @@
+html, body{
+    font-family: 'Molengo', sans-serif;
+    font-weight: bold;
+}
+
+.figura-body{
+    height: 450px;
+    width: 100%;
+    margin: 6.3% auto 0;
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+    background-color: rgba(0, 74, 128, 0.46);
+}
+
+.header-intro{
+    width: auto;
+    height: 550px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.navbar-default{
+   background-color:#4795CA;
+}
+
+
+#nav-customer{
+    position: relative;
+    color:  #337AB7;
+    min-height: 60px;
+    margin-bottom: 0;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0;
+}
+
+.icone_navbar{
+    padding-top: 8px;
+    height: 50px;
+    width: auto;
+    margin-right: 25px;
+}
+
+#img-fundo .filter {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    position: relative;
+
+}
+.filter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
+  background: rgba(173, 205, 239, 0.3);
+}
