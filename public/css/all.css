@@ -8,6 +8,7 @@
 html, body{
     font-family: 'Molengo', sans-serif;
     font-weight: bold;
+    background: rgba(235, 240, 250, 0.3);
 }
 
 .figura-body{
@@ -72,3 +73,23 @@ html, body{
   opacity: 0.5;
   background: rgba(173, 205, 239, 0.3);
 }
+
+.btn{
+    float: right;
+    padding: 8px 25px;
+}
+
+.close{
+    color:black;
+    font-size: 25px;
+}
+
+/*label da modal de login*/
+.lbl{
+  float: left;
+}
+
+.panel-cadastro{
+  margin-top: 50px;
+}
+
