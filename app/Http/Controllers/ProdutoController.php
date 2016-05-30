@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Produto;
+use App\Categoria;
 use App\Http\Controllers\Auth\AuthController;
 use Auth;
 use DB;
@@ -22,6 +23,7 @@ class ProdutoController extends Controller {
 	*/
 	 public function __construct()
 	{
+
 		$this->middleware('auth');
 	}
 
@@ -44,6 +46,7 @@ class ProdutoController extends Controller {
 	 */
 	public function create()
 	{
+
 		return view('produtos.create');
 	}
 
@@ -110,7 +113,7 @@ class ProdutoController extends Controller {
 
 		$produto->id = $request->input("id");
 		$produto->nome = $request->input("nome");
-		$produto->categoria = $request->input("categoria");
+		$produto->categoria_id = $request->input("categoria");
 		$produto->quantidade = $request->input("quantidade");
 		$produto->updated_at = $request->input("updated_at");
 		$produto->created_at = $request->input("created_at");

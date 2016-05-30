@@ -4,7 +4,7 @@
 @endsection
 @section('header')
 <div class="page-header">
-  <h1><i class="glyphicon glyphicon-plus"></i> Clientes / Create </h1>
+  <h1><i class=""></i>Novo Cliente</h1>
 </div>
 @endsection
 
@@ -12,13 +12,13 @@
 @include('error')
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6">
 
     <form action="{{ route('clientes.store') }}" method="POST">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
       <div class="form-group @if($errors->has(' nome')) has-error @endif">
-       <label for=" nome-field"> nome</label>
+       <label for=" nome-field"> Nome</label>
        <input type="text" id=" nome-field" name=" nome" class="form-control" value="{{ old("nome") }}"/>
        @if($errors->has(" nome"))
        <span class="help-block">{{ $errors->first(" nome") }}</span>
@@ -66,9 +66,10 @@
        <span class="help-block">{{ $errors->first("estado") }}</span>
        @endif
      </div>
-     <div class="well well-sm">
-      <button type="submit" class="btn btn-primary">Create</button>
-      <a class="btn btn-link pull-right" href="{{ route('clientes.index') }}"><i class="glyphicon glyphicon-backward"></i> Back</a>
+     <hr>
+     <div class="">
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <a class="btn btn-link pull-right" href="{{ route('clientes.index') }}"><i class=""></i> Voltar</a>
     </div>
   </form>
 

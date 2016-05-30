@@ -4,7 +4,7 @@
 @endsection
 @section('header')
     <div class="page-header">
-        <h1><i class="glyphicon glyphicon-edit"></i> Categorias / Edit #{{$categorium->id}}</h1>
+        <h1><i class=""></i> Categoria #{{$categoria->descricao}}</h1>
     </div>
 @endsection
 
@@ -12,29 +12,30 @@
     @include('error')
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
 
-            <form action="{{ route('categorias.update', $categorium->id) }}" method="POST">
+            <form action="{{ route('categorias.update', $categoria->id) }}" method="POST">
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group @if($errors->has('id')) has-error @endif">
                        <label for="id-field">Id</label>
-                    <input type="text" id="id-field" name="id" class="form-control" value="{{ $categorium->id }}"/>
+                    <input type="text" id="id-field" name="id" class="form-control"  disabled value="{{ $categoria->id }}"/>
                        @if($errors->has("id"))
                         <span class="help-block">{{ $errors->first("id") }}</span>
                        @endif
                     </div>
                     <div class="form-group @if($errors->has('descricao')) has-error @endif">
                        <label for="descricao-field">Descricao</label>
-                    <input type="text" id="descricao-field" name="descricao" class="form-control" value="{{ $categorium->descricao }}"/>
+                    <input type="text" id="descricao-field" name="descricao" class="form-control" value="{{ $categoria->descricao }}"/>
                        @if($errors->has("descricao"))
                         <span class="help-block">{{ $errors->first("descricao") }}</span>
                        @endif
                     </div>
-                <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                    <a class="btn btn-link pull-right" href="{{ route('categorias.index') }}"><i class="glyphicon glyphicon-backward"></i>  Back</a>
+                    <hr>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Savar</button>
+                    <a class="btn btn-link pull-right" href="{{ route('categorias.index') }}"><i class=""></i> Voltar</a>
                 </div>
             </form>
 

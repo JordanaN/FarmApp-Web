@@ -4,7 +4,7 @@
 @endsection
 @section('header')
     <div class="page-header">
-        <h1><i class="glyphicon glyphicon-edit"></i> Produtos / Edit #{{$produto->id}}</h1>
+        <h1><i class=""></i> Produto  #{{$produto->nome}}</h1>
     </div>
 @endsection
 
@@ -12,15 +12,14 @@
     @include('error')
 
     <div class="row">
-        <div class="col-md-12">
-
+        <div class="col-md-6">
             <form action="{{ route('produtos.update', $produto->id) }}" method="POST">
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group @if($errors->has('id')) has-error @endif">
                        <label for="id-field">Id</label>
-                    <input type="text" id="id-field" name="id" class="form-control" value="{{ $produto->id }}"/>
+                    <input type="text" id="id-field" name="id" class="form-control" disabled value="{{ $produto->id }}"/>
                        @if($errors->has("id"))
                         <span class="help-block">{{ $errors->first("id") }}</span>
                        @endif
@@ -34,7 +33,7 @@
                     </div>
                     <div class="form-group @if($errors->has('categoria')) has-error @endif">
                        <label for="categoria-field">Categoria</label>
-                    <input type="text" id="categoria-field" name="categoria" class="form-control" value="{{ $produto->categoria }}"/>
+                    <input type="text" id="categoria-field" name="categoria" class="form-control" value="{{ $produto->categoria->descricao }}"/>
                        @if($errors->has("categoria"))
                         <span class="help-block">{{ $errors->first("categoria") }}</span>
                        @endif
@@ -46,23 +45,10 @@
                         <span class="help-block">{{ $errors->first("quantidade") }}</span>
                        @endif
                     </div>
-                    <div class="form-group @if($errors->has('updated_at')) has-error @endif">
-                       <label for="updated_at-field">Updated_at</label>
-                    <input type="text" id="updated_at-field" name="updated_at" class="form-control" value="{{ $produto->updated_at }}"/>
-                       @if($errors->has("updated_at"))
-                        <span class="help-block">{{ $errors->first("updated_at") }}</span>
-                       @endif
-                    </div>
-                    <div class="form-group @if($errors->has('created_at')) has-error @endif">
-                       <label for="created_at-field">Created_at</label>
-                    <input type="text" id="created_at-field" name="created_at" class="form-control" value="{{ $produto->created_at }}"/>
-                       @if($errors->has("created_at"))
-                        <span class="help-block">{{ $errors->first("created_at") }}</span>
-                       @endif
-                    </div>
-                <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                    <a class="btn btn-link pull-right" href="{{ route('produtos.index') }}"><i class="glyphicon glyphicon-backward"></i>  Back</a>
+                    <hr>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a class="btn btn-link pull-right" href="{{ route('produtos.index') }}"><i class=""></i> Voltar </a>
                 </div>
             </form>
 

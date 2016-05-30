@@ -4,7 +4,7 @@
 @endsection
 @section('header')
     <div class="page-header">
-        <h1><i class="glyphicon glyphicon-plus"></i> Categorias / Create </h1>
+        <h1><i class=""></i> Nova Categoria </h1>
     </div>
 @endsection
 
@@ -12,18 +12,10 @@
     @include('error')
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
 
             <form action="{{ route('categorias.store') }}" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                <div class="form-group @if($errors->has('id')) has-error @endif">
-                       <label for="id-field">Id</label>
-                    <input type="text" id="id-field" name="id" class="form-control" value="{{ old("id") }}"/>
-                       @if($errors->has("id"))
-                        <span class="help-block">{{ $errors->first("id") }}</span>
-                       @endif
-                    </div>
                     <div class="form-group @if($errors->has('descricao')) has-error @endif">
                        <label for="descricao-field">Descricao</label>
                     <input type="text" id="descricao-field" name="descricao" class="form-control" value="{{ old("descricao") }}"/>
@@ -31,9 +23,10 @@
                         <span class="help-block">{{ $errors->first("descricao") }}</span>
                        @endif
                     </div>
-                <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">Create</button>
-                    <a class="btn btn-link pull-right" href="{{ route('categorias.index') }}"><i class="glyphicon glyphicon-backward"></i> Back</a>
+                    <hr>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a class="btn btn-link pull-right" href="{{ route('categorias.index') }}"><i class=""></i>Voltar</a>
                 </div>
             </form>
 
