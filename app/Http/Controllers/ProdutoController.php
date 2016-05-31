@@ -46,8 +46,9 @@ class ProdutoController extends Controller {
 	 */
 	public function create()
 	{
+		$categorias = Categoria::orderBy('descricao', 'asc')->get();
 
-		return view('produtos.create');
+		return view('produtos.create')->with('categorias', $categorias);
 	}
 
 	/**
@@ -111,12 +112,8 @@ class ProdutoController extends Controller {
 	{
 		$produto = Produto::findOrFail($id);
 
-		$produto->id = $request->input("id");
 		$produto->nome = $request->input("nome");
-		$produto->categoria_id = $request->input("categoria");
 		$produto->quantidade = $request->input("quantidade");
-		$produto->updated_at = $request->input("updated_at");
-		$produto->created_at = $request->input("created_at");
 
 		$produto->save();
 

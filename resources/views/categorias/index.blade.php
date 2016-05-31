@@ -4,7 +4,7 @@
 <div class="page-header clearfix">
   <h1>
     <i class=""></i> Categorias
-    <a class="btn btn-success pull-right" href="{{ route('categorias.create') }}"><i class=""></i> Cradastrar</a>
+    <a class="btn btn-success pull-right" href="{{ route('categorias.create') }}"><i class=""></i> Cadastrar</a>
   </h1>
 
 </div>

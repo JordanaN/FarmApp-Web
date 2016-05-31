@@ -33,7 +33,8 @@
                     </div>
                     <div class="form-group @if($errors->has('categoria')) has-error @endif">
                        <label for="categoria-field">Categoria</label>
-                    <input type="text" id="categoria-field" name="categoria" class="form-control" value="{{ $produto->categoria->descricao }}"/>
+                    <input type="text" id="categoria-field" disabled="" class="form-control" value="{{ $produto->categoria->descricao }}"/>
+                    <input type="hidden" id="categoria-hdn-field" name="categoria_id" value="{{ $produto->categoria_id }}"/>
                        @if($errors->has("categoria"))
                         <span class="help-block">{{ $errors->first("categoria") }}</span>
                        @endif

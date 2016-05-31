@@ -24,13 +24,20 @@
                         <span class="help-block">{{ $errors->first("nome") }}</span>
                        @endif
                     </div>
-                     <div class="form-group @if($errors->has('categoria')) has-error @endif">
+
+
+                    <div class="form-group @if($errors->has('categoria')) has-error @endif">
                        <label for="categoria-field">Categoria</label>
-                    <input type="text" id="categoria-field" name="categoria" class="form-control" value="{{ old("categoria") }}"/>
+                    <select  id="categoria-field" name="categoria" class="form-control" >
+                    @foreach ($categorias as $categoria)
+                    <option value="{{ $categoria->id }}"> {{ $categoria->descricao }}</option>
+                    @endforeach
+                    </select>
                        @if($errors->has("categoria"))
                         <span class="help-block">{{ $errors->first("categoria") }}</span>
                        @endif
                     </div>
+
                     <div class="form-group @if($errors->has('quantidade')) has-error @endif">
                        <label for="quantidade-field">Quantidade</label>
                     <input type="text" id="quantidade-field" name="quantidade" class="form-control" value="{{ old("quantidade") }}"/>
