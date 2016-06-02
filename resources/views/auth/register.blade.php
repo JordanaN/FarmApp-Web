@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row panel-cadastro">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+        <div class="col-md-7 ">
+            <div class="panel">
                 <div class="panel-heading">Cadastro</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
@@ -77,6 +77,10 @@
                 </div>
             </div>
         </div>
+        <div>
+        <img src=" {{asset('../img/clientes.gif')}}" width="auto" height="350px" >
     </div>
+    </div>
+
 </div>
 @endsection

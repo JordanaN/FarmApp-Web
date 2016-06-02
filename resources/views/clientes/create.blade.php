@@ -72,8 +72,13 @@
       <a class="btn btn-link pull-right" href="{{ route('clientes.index') }}"><i class=""></i> Voltar</a>
     </div>
   </form>
-
 </div>
+<div class="imCliente">
+  <img src=" {{asset('../img/dance4.gif')}}" width="auto" height="350px" >
+</div>
+</div>
+<div class="footer">
+  <p></p>
 </div>
 @endsection
 @section('scripts')

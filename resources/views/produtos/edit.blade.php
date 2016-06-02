@@ -52,8 +52,10 @@
                     <a class="btn btn-link pull-right" href="{{ route('produtos.index') }}"><i class=""></i> Voltar </a>
                 </div>
             </form>
-
         </div>
+        <div>
+  <img src=" {{asset('../img/remedios.jpg')}}" width="auto" height="350px" >
+</div>
     </div>
 @endsection
 @section('scripts')

@@ -1,7 +1,7 @@
-<div class="modal-content col-md-12">
+<div class="modal-content col-md-12 ">
     <div class="modal-header ">
     <button  type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div class="panel-default">
+        <div class="panel">
             <div class="panel-heading">Login</div>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
@@ -33,19 +33,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-md-10 dbt">
+                    <div class="form-group col-md-5 lbl">
                             <div class="checkbox">
                                 <label class="lbl">
                                     <input type="checkbox" name="remember"> Ficar conectado
                                 </label>
+                            </div>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i>Login
                                 </button>
-                            </div>
                         </div>
-                        <a class="btn btn-link" href="{{ url('/password/reset') }}">Esqueceu a Senha?</a>
-                    </div>
                 </form>
             </div>
         </div>

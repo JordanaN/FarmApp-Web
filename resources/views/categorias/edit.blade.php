@@ -3,7 +3,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css" rel="stylesheet">
 @endsection
 @section('header')
-    <div class="page-header">
+        <div class="col-md-6  col-md-offset-3">
+    <div class="page-header sty-pn">
         <h1><i class=""></i> Categoria #{{$categoria->descricao}}</h1>
     </div>
 @endsection
@@ -12,7 +13,6 @@
     @include('error')
 
     <div class="row">
-        <div class="col-md-6">
 
             <form action="{{ route('categorias.update', $categoria->id) }}" method="POST">
                 <input type="hidden" name="_method" value="PUT">

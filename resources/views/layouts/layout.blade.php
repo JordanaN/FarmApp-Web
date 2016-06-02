@@ -15,6 +15,7 @@
 
 <body>
     <div class="container-fluid">
+    <div class="">
         <div class="row">
           <nav class="navbar navbar-default navbar-fixed-top" id="nav-customer" role="navigation">
             <div class="container">
@@ -45,11 +46,10 @@
       </div>
   </div>
 </nav>
-
 <div class="container">
     @yield('header')
     @yield('content')
-
+</div>
 </div>
 <script type="text/javascript" src=" {{asset('js/all.js')}}"></script>
 @yield('scripts')

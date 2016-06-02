@@ -79,10 +79,25 @@ html, body{
 
 /*label da modal de login*/
 .lbl{
-  float: left;
+  float: right;
 }
 
 .panel-cadastro{
   margin-top: 50px;
 }
 
+/*Painel login e register*/
+.panel-heading {
+text-align: center;
+font-size: 39px;
+}
+
+.sty-pn{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 25%;
+}
+
+.imCliente{
+  margin-top: 12%;
+}
