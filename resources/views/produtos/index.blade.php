@@ -12,6 +12,7 @@
 
 @section('content')
 <div class="row col-md-12 col-sm-6">
+
     @if($produtos)
     <table class="table table-striped table-responsive">
       <thead>

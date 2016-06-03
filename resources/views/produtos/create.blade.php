@@ -35,7 +35,7 @@
 			</div>
 
 			<div class="form-group @if($errors->has('quantidade')) has-error @endif">
-				<label for="quantidade-field">Quantidade</label>
+				<label for="quantidade-field">Quantidade de caixas</label>
 				<input type="text" id="quantidade-field" name="quantidade" class="form-control" value="{{ old("quantidade") }}"/>
 				@if($errors->has("quantidade"))
 				<span class="help-block">{{ $errors->first("quantidade") }}</span>

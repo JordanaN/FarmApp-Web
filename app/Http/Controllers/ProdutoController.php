@@ -39,6 +39,19 @@ class ProdutoController extends Controller {
 		return view('produtos.index', compact('produtos'));
 	}
 
+
+	public function filter($filtros)
+	{
+		$produtoQueryBuilder = $this->produtos->select('*');
+
+		if(!empty($filtros['nome'])) {
+			$produtoQueryBuilder->where(\DB::raw('LOWER(nome)'), 'LIKE', '%'.strtolower($filtros['nome']).'%');
+		}
+
+		return redirect()->route('produtos.index')->with('filter', $produtoQueryBuilder)->paginate(10);
+	}
+
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
